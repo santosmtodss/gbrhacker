@@ -121,13 +121,16 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             button.disabled = true;
             button.style.opacity = '0.5'; // Aplica opacidade ao botão
 
-            // Gera porcentagem aleatória entre 93 e 99
-            var porcentagem = "100%";
-            widget4.innerHTML = porcentagem;
+           // Gera porcentagem aleatória entre 90 e 100
+var porcentagem = Math.floor(Math.random() * (100 - 90 + 1)) + 90 + "%";
+widget4.innerHTML = porcentagem;
 
-            // Mudar os ícones e aplicar as cores apenas a 4 ícones
-			const diamonds = Math.floor(Math.random() * (6 - 4 + 1)) + 4;
-			const bombs = Math.floor(Math.random() * (5 - 3 + 1)) + 3;
+// Gera quantidade aleatória de diamantes (2 a 4)
+const diamonds = Math.floor(Math.random() * (4 - 2 + 1)) + 2;
+
+// Gera quantidade aleatória de bombas (3 a 4)
+const bombs = Math.floor(Math.random() * (4 - 3 + 1)) + 3;
+
             var modifiedIndices = [];
             while (modifiedIndices.length < diamonds) { // original 4
                 var index = Math.floor(Math.random() * iconContainers.length);
